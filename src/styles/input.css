@@ -1,0 +1,23 @@
+/* src/styles/input.css */
+@import "tailwindcss";
+
+@layer components {
+    .terminal-border {
+        @apply border border-slate-800 bg-slate-900/50 shadow-inner;
+    }
+    
+    .glow-text {
+        text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+    }
+}
+
+/* Custom Scrollbar for the Terminal aesthetic */
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+    background: #334155;
+}

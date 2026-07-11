@@ -1,0 +1,6 @@
+The Gold Master app.js and my app.v1.archive.js are saved in VS Code.
+
+Before finishing a testing session do the following:
+1. Archive code such as app.js file so that master is available if needed.
+2. Verify the Schema: Make sure your Supabase table has correctly logged those successful runs from earlier.
+3. Note the "Bull Case": Keep a note that Yield: 535 / Rate: 42.5 is your target for testing the Market Alert when you restart.

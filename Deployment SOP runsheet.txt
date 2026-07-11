@@ -1,0 +1,119 @@
+Here is your unified, single-source operational runsheet. 
+This checklist synthesizes your proven deployment pattern—moving from local code to a version-controlled repository, setting up an autonomous cloud build, and registering the finished product on your master **HeadsUp Consulting** platform.
+
+Save this copy to use as your step-by-step pipeline blueprint for your next MVP launch.
+
+---
+
+## **THE MASTER MVP DEPLOYMENT RUNSHEET**
+
+### **Phase 1: Local Version Control & GitHub Initialization**
+
+*Target: Move your local project code from VS Code into a secure, remote tracking repository.*
+
+* [ ] **Open Terminal:** Open your VS Code terminal inside the root directory of your newly completed MVP project.
+* [ ] **Initialize Git State:** Instantiated a clean local tracking database.
+```bash
+git init
+
+```
+
+
+* [ ] **Stage Project Files:** Add all source code, components, and configuration assets to the commit index.
+```bash
+git add .
+
+```
+
+
+* [ ] **Commit the Baseline:** Lock in the verified local build with an explicit baseline description.
+```bash
+git commit -m "feat: stabilize initial MVP architecture baseline"
+
+```
+
+
+* [ ] **Set Main Branch Identity:** Force the default branch naming convention to `main`.
+```bash
+git branch -M main
+
+```
+
+
+* [ ] **Map Remote Repository:** Create a new repository on your GitHub account (`jamespnz`) matching your new project name, then bind it to your local environment:
+```bash
+git remote add origin https://github.com/jamespnz/[your-new-repo-name].git
+
+```
+
+
+* [ ] **Execute Remote Push:** Ship the code up to GitHub and establish upstream tracking.
+```bash
+git push -u origin main
+
+```
+
+
+
+---
+
+### **Phase 2: Cloud Provisioning via Netlify**
+
+*Target: Establish an automated, continuous deployment pipeline for the application.*
+
+* [ ] **Access Dashboard:** Log into your Netlify dashboard environment.
+* [ ] **Import Repository:** Click **Add new site**, select **Import an existing project**, and choose **GitHub** as the provider.
+* [ ] **Authorize Repository Tracking:** Locate and select your new repository from your GitHub repository list (refresh or verify permissions if prompted).
+* [ ] **Verify Build Variables:** Ensure the build environment variables match standard Vite parameters:
+* **Base Directory:** *Leave blank*
+* **Build Command:** `npm run build`
+* **Publish Directory:** `dist`
+* **Environment Variables:** *Leave blank/untouched* (no variables are required for pure static or local-first memory configurations).
+
+
+* [ ] **Trigger Production Build:** Click **Deploy [your-project-name]**.
+* [ ] **Test the App:** Once the container build logs flag a success status, navigate to the **Site Overview** panel, copy the public `https://[your-project-name].netlify.app/` URL, and verify its layout states run flawlessly on the live web.
+
+---
+
+### **Phase 3: Portfolio Integration & Routing (HeadsUp Consulting)**
+
+*Target: Register the new product as a dedicated sub-route on your main showcase hub.*
+
+* [ ] **Open Hub Project:** Open your local `heads-up-consulting` project directory in VS Code.
+* [ ] **Register Product Route:** Create a new, dedicated sub-page file for the product (e.g., `/src/pages/portfolio/[your-new-product].tsx`).
+* [ ] **Draft the Business Case:** Populate the new page with structured, commercial-driven copy following your standard layout format:
+* **Problem Statement:** Explicitly outline the systemic or operational friction in the target industry sector.
+* **The Solution:** Define how your software design automates or fixes that friction.
+* **Launch Links:** Map the "Launch App" action buttons in the header and footer blocks directly to your new live Netlify URL from Phase 2.
+
+
+* [ ] **Update Master Portfolio Entry:** Open your central `Portfolio.tsx` view file and add a uniform, standard link card to your grid array:
+* Structure it identically to your *ZenithAudit* and *NZ-Build-Guardian* cards.
+* Configure its navigation path to point straight to your newly registered sub-route.
+
+
+* [ ] **Sync and Publish via Bolt:**
+* Open your Bolt workspace interface for HeadsUp Consulting to pull the changes, verify the layout consistency across the product grid, and ensure the new linked card functions identically to your other products.
+* Click the **Publish** button in the top-right corner of the Bolt editor to push the updated architecture live.
+
+
+
+---
+
+### **Phase 4: Run-Time Validation Check**
+
+*Target: Final acceptance criteria run-through.*
+
+* [ ] Open your live portfolio site.
+* [ ] Confirm the new product card displays correctly in sequence.
+* [ ] Click the card to verify it navigates smoothly to its dedicated `/portfolio/` sub-route.
+* [ ] Click "Launch App" on the detailed sub-page to confirm it instantly fires up the responsive MVP application window out of its independent Netlify link.
+
+---
+
+**Project Management Execution Context (PMBOK 7th Edition Style Guide)**
+
+* **Next Task**: Archive the current deployment runsheet asset in project documentation for future product development cycles.
+* **Assigned Component**: Project Governance / Process Standardization.
+* **Project State**: Closed / Standard Operating Procedure Verified.

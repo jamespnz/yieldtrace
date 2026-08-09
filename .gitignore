@@ -1,3 +1,33 @@
-node_modules/
+# ==========================================
+# 1. Environment & Credential Files (CRITICAL)
+# ==========================================
 .env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.p12
+
+# ==========================================
+# 2. Local Notes, Secret Files & Logs
+# ==========================================
+*_keys.txt
+*secrets*
+*.log
+
+# ==========================================
+# 3. Dependencies & Build Artifacts
+# ==========================================
+node_modules/
+dist/
+build/
+.output/
+
+# ==========================================
+# 4. OS & Editor Metadata
+# ==========================================
 .DS_Store
+Thumbs.db
+.vscode/
+.idea/

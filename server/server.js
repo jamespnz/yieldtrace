@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 
 // 2. ACTIVATE CORS FOR LOCAL DEVELOPMENT PORT BOUNDARIES
 app.use(cors({
-  origin: "http://localhost:8080",
+  origin: "https://yieldtrace.netlify.app/",
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));

@@ -30,7 +30,10 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(rootDir, "index.html"));
 });
 
-// ... remainder of your file stays exactly the same
+// --- 1b. GSC VERIFICATION GATEWAY ---
+app.get("/google9a93f6f686d88ddc.html", (req, res) => {
+  res.sendFile(path.join(rootDir, "google9a93f6f686d88ddc.html"));
+});
 
 // --- 2. THE UI GATEWAY (The priority) ---
 // This looks for index.html in the root folder (one level up from /server)

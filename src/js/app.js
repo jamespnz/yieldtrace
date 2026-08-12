@@ -137,11 +137,11 @@ runBtn.addEventListener("click", async () => {
     const currentSessionId = crypto.randomUUID();
     addTrace("CONNECTING TO NODE BACKEND...", "info");
 
-    const response = await fetch("https://yieldtrace-backend.onrender.com", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ sessionId: currentSessionId, metadata: project, metrics }),
-    });
+  const response = await fetch("https://yieldtrace-backend.onrender.com/api/analyze", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ sessionId: currentSessionId, metadata: project, metrics }),
+  });
 
     if (!response.ok) throw new Error(`Quota or Protocol Fault: ${response.status}`);
 

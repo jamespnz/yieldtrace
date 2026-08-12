@@ -20,7 +20,9 @@ app.use((req, res, next) => {
 app.use(cors({
   origin: [
     "https://yieldtrace.headsup-consulting.com",
-    "https://yieldtrace.netlify.app" // Temporary fallback during DNS propagation
+    "https://yieldtrace.netlify.app",
+    "http://localhost:3000",
+    "http://localhost:5173"
   ],
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]

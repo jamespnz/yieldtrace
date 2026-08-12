@@ -18,7 +18,10 @@ app.use((req, res, next) => {
 
 // 2. ACTIVATE CORS FOR LOCAL DEVELOPMENT PORT BOUNDARIES
 app.use(cors({
-  origin: "https://yieldtrace.netlify.app",
+  origin: [
+    "https://yieldtrace.headsup-consulting.com",
+    "https://yieldtrace.netlify.app" // Temporary fallback during DNS propagation
+  ],
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
